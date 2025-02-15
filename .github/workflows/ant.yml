@@ -6,7 +6,7 @@ jobs:
     - uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
-        java-version: 17
+        java-version: 21
     - uses: actions/checkout@v4
 #   - run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
     - run: ant generate-all compile

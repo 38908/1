@@ -9,7 +9,7 @@ jobs:
         java-version: 11
     - uses: actions/checkout@v4
 #   - run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
-    - run: ant generate-all
+    - run: ant all
 #   - uses: actions/upload-artifact@v1
 #     with:
 #       name: lwjgl-2.9.4.zip

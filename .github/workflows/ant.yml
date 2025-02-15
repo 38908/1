@@ -10,6 +10,14 @@ jobs:
     - uses: actions/checkout@v4
 #   - run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
     - run: ant generate-all compile
+    - uses: actions/upload-artifact@v4
+      with:
+        path: |
+          libs/lwjgl.jar
+          libs/lwjgl_util_applet.jar
+          libs/lwjgl_test.jar
+          libs/lwjgl_util.jar
+        compression-level: 9
 #   - uses: actions/upload-artifact@v1
 #     with:
 #       name: lwjgl-2.9.4.zip

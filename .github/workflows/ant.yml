@@ -3,10 +3,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - run: wget https://download.java.net/java/GA/jdk24/1f9ff9062db4449d8ca828c504ffae90/36/GPL/openjdk-24_linux-x64_bin.tar.gz
     - uses: actions/setup-java@v4
       with:
-        distribution: 'zulu'
-        java-version: 23
+        distribution: 'jdkfile'
+        jdkFile: openjdk-24_linux-x64_bin.tar.gz
+        java-version: 24
+#   - uses: actions/setup-java@v4
+#     with:
+#       distribution: 'zulu'
+#       java-version: 23
     - uses: actions/checkout@v4
 #   - run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
     - run: ant jars

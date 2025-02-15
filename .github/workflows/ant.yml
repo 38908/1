@@ -3,16 +3,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-#   - run: wget https://download.java.net/java/early_access/jdk25/10/GPL/openjdk-25-ea+10_linux-x64_bin.tar.gz
-#   - uses: actions/setup-java@v4
-#     with:
-#       distribution: 'jdkfile'
-#       jdkFile: openjdk-25-ea+10_linux-x64_bin.tar.gz
-#       java-version: 25
+    - run: wget https://download.java.net/openjdk/jdk21/ri/openjdk-21+35_linux-x64_bin.tar.gz
     - uses: actions/setup-java@v4
       with:
-        distribution: 'oracle'
-        java-version: 23
+        distribution: 'jdkfile'
+        jdkFile: openjdk-21+35_linux-x64_bin.tar.gz
+        java-version: 21
+#   - uses: actions/setup-java@v4
+#     with:
+#       distribution: 'oracle'
+#       java-version: 23
     - uses: actions/checkout@v4
 #   - run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
     - run: ant jars
